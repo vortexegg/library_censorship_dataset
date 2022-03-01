@@ -4,11 +4,11 @@ This dataset was created for Data Curation course at the University of Washingto
 
 The dataset is available as three .csv files collected from the following sources:
 
-1. [School Library Journal's Controversial Books Survey on Self-Censorship](https://www.slj.com/page/features-self-censorship):
+1. Source: [School Library Journal's Controversial Books Survey on Self-Censorship](https://www.slj.com/page/features-self-censorship)
     - File: `2016-slj-controversial_books_survey.csv`
-2. [National Coalition Against Censorship's Youth Censorship Database](https://ncac.org/youth-censorship-database)
+2. Source: [National Coalition Against Censorship's Youth Censorship Database](https://ncac.org/youth-censorship-database)
     - File: `2022-ncac-youth_censorship_database.csv`
-3. [PEN America's Educational Gag Orders Index](https://pen.org/steep-rise-gag-orders-many-sloppily-drafted/)
+3. Source: [PEN America's Educational Gag Orders Index](https://pen.org/steep-rise-gag-orders-many-sloppily-drafted/)
     - File: `2022-pen_america-educational_gag_orders.csv`
 
 ## Table of Contents
