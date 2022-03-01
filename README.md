@@ -63,7 +63,7 @@ The specific normalization that was applied to each file is documented in the th
 
 _Note: The data dictionary does not include a **Measurement Unit** column as none of the values represents a measurement taken in a particular unit._
 
-### SLJ Controversial Books Survey dataset
+### 1. Documentation for SLJ Controversial Books Survey dataset
 
 `2016-slj-controversial_books_survey.csv`:
 
@@ -77,7 +77,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 | **middle_school** | Middle School Level | Integer | 0 or 1 | Whether this response applies to a Middle School level (6 - 8) |
 | **high_school** | High School Level | Integer | 0 or 1 | Whether this response applies to a High School level (9 - 12) |
 
-### NCAC Youth Censorship Database dataset
+### 2. Documentation for NCAC Youth Censorship Database dataset
 
 `2022-ncac-youth_censorship_database.csv`:
 
@@ -100,7 +100,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 | **impacted_K-12** | K-12 Impacted | Integer | 0 or 1 | Whether the impacted population was K - 12 students |
 | **impacted_P-8** | P-8 Impacted | Integer | 0 or 1 | Whether the impacted population was Preschool through 8th students |
 
-### PEN America Educational Gag Orders dataset
+### 3. Documentation for PEN America Educational Gag Orders dataset
 
 `2022-pen_america-educational_gag_orders.csv`:
 
@@ -140,6 +140,8 @@ used spatial and temporal coverage fields
 
 Schema: [Dublin Core](https://www.dublincore.org)
 
+### A. Metadata for SLJ Controversial Books Survey dataset
+
 | Attribute | Value |
 | -- | -- |
 | Title | SLJ Controversial Books Survey dataset |
@@ -157,6 +159,8 @@ Schema: [Dublin Core](https://www.dublincore.org)
 | Relation | N/A |
 | Identifier | https://github.com/vortexegg/library_censorship_dataset/blob/main/data/2016-slj-controversial_books_survey.csv |
 
+### B. Metadata for NCAC Youth Censorship Database dataset
+
 | Attribute | Value |
 | -- | -- |
 | Title | NCAC Youth Censorship Database dataset |
@@ -172,6 +176,8 @@ Schema: [Dublin Core](https://www.dublincore.org)
 | Audience | General public |
 | Language | English |
 | Identifier | https://github.com/vortexegg/library_censorship_dataset/blob/main/data/2022-ncac-youth_censorship_database.csv |
+
+### C. Metadata for PEN America Educational Gag Orders dataset
 
 | Attribute | Value |
 | -- | -- |
