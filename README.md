@@ -26,7 +26,7 @@ This dataset repository contains the following directories:
 
 ```code
 /data           # The curated data files belonging to the dataset
-/notebooks      # Jupyter notebooks used to fetch and normalize the data
+/notebooks      # Jupyter notebooks used to fetch and normalize the data, not part of the dataset
 /unprocessed    # The original un-normalized data files as retrieved from the sources, not part of the dataset
 README.md       # This project documentation
 ```
