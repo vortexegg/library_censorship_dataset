@@ -63,7 +63,7 @@ The specific normalization that was applied to each file is documented in the th
 
 _Note: The data dictionary does not include a **Measurement Unit** column as none of the values represents a measurement taken in a particular unit._
 
-**SLJ Controversial Books Survey on Self-Censorship data**
+### SLJ Controversial Books Survey dataset
 
 `2016-slj-controversial_books_survey.csv`:
 
@@ -77,7 +77,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 | **middle_school** | Middle School Level | Integer | 0 or 1 | Whether this response applies to a Middle School level (6 - 8) |
 | **high_school** | High School Level | Integer | 0 or 1 | Whether this response applies to a High School level (9 - 12) |
 
-**NCAC Youth Censorship Database data**
+### NCAC Youth Censorship Database dataset
 
 `2022-ncac-youth_censorship_database.csv`:
 
@@ -100,7 +100,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 | **impacted_K-12** | K-12 Impacted | Integer | 0 or 1 | Whether the impacted population was K - 12 students |
 | **impacted_P-8** | P-8 Impacted | Integer | 0 or 1 | Whether the impacted population was Preschool through 8th students |
 
-**PEN America Educational Gag Orders data**
+### PEN America Educational Gag Orders dataset
 
 `2022-pen_america-educational_gag_orders.csv`:
 
@@ -131,7 +131,63 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 
 ## Metadata
 
+removed publisher
+removed relation
+removed rights
+added audience
+put my name as contributor, since the original source is the creator of the content
+used spatial and temporal coverage fields
 
+Schema: [Dublin Core](https://www.dublincore.org)
+
+| Attribute | Value |
+| -- | -- |
+| Title | SLJ Controversial Books Survey dataset |
+| Creator | School Library Journal |
+| Subject | censorship, libraries, librarians, self-censorship, survey-results |
+| Description | Data containing survey responses from school library personnel about self-censorship from 2016 |
+| Contributor | Scott Johnson |
+| Coverage | Spatial: United States, Temporal: 2016 |
+| Date | Created: 2022-03-01 |
+| Type | Dataset |
+| Format | CSV |
+| Source | https://www.slj.com/page/features-self-censorship |
+| Audience | General public |
+| Language | English |
+| Relation | N/A |
+| Identifier | https://github.com/vortexegg/library_censorship_dataset/blob/main/data/2016-slj-controversial_books_survey.csv |
+
+| Attribute | Value |
+| -- | -- |
+| Title | NCAC Youth Censorship Database dataset |
+| Creator | National Coalition Against Censorship |
+| Subject | censorship, schools, libraries, youth, challenges |
+| Description | Data of censorship incidents affecting K-12 students |
+| Contributor | Scott Johnson |
+| Coverage | Spatial: United States, Temporal: 2018-2022 |
+| Date | Created: 2022-03-01 |
+| Type | Dataset |
+| Format | CSV |
+| Source | https://ncac.org/youth-censorship-database |
+| Audience | General public |
+| Language | English |
+| Identifier | https://github.com/vortexegg/library_censorship_dataset/blob/main/data/2022-ncac-youth_censorship_database.csv |
+
+| Attribute | Value |
+| -- | -- |
+| Title | PEN America Educational Gag Orders dataset |
+| Creator | PEN America |
+| Subject | censorship, schools, libraries, gag orders, education, challenges, bills |
+| Description | Data of bills stipulating legal gag orders and their enforcement |
+| Contributor | Scott Johnson |
+| Coverage | Spatial: United States, Temporal: 2021 - 2022  |
+| Date | Created: 2022-03-01 |
+| Type | Dataset |
+| Format | CSV |
+| Source | https://pen.org/steep-rise-gag-orders-many-sloppily-drafted/ |
+| Audience | General public |
+| Language | English |
+| Identifier | https://github.com/vortexegg/library_censorship_dataset/blob/main/data/2022-pen_america-educational_gag_orders.csv |
 
 ## Security
 
