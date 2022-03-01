@@ -31,7 +31,7 @@ This dataset repository contains the following directories:
 README.md       # This project documentation
 ```
 
-_Note: The unprocessed data files and Jupyter notebooks are included in this repository for archival and reference purposes. However they are not considered to be a part of the curated dataset for purposes of data sharing nor are included in the data documentation._
+_Note: The Jupyter notebooks and unprocessed files are included in this repository for archival and reference purposes only. They are not considered to be a part of the curated dataset for purposes of data sharing, nor are they included in the data documentation below._
 
 ## Naming
 
