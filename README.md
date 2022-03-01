@@ -19,11 +19,6 @@ The dataset is available as three .csv files collected from the following source
 - [Data Dictionary](#data-dictionary)
 - [Metadata](#metadata)
 - [Security](#security)
-- [Contact](#contact)
-
-    How data have been normalized
-    The file naming convention that your dataset uses
-    Any information about variable names, definitions etc. (you may choose to structure this like a data dictionary)
 
 ## Directory Structure
 
@@ -36,16 +31,15 @@ This dataset repository contains the following directories:
 README.md       # This project documentation
 ```
 
-_Note: The unprocessed data files are included in this repository in the state that they were retrieved from the sources as an archive for reference purposes.
-However they are not considered a part of the curated dataset for purposes of documentation or sharing._
+_Note: The unprocessed data files and Jupyter notebooks are included in this repository for archival and reference purposes. However they are not considered to be a part of the curated dataset for purposes of data sharing nor are included in the data documentation._
 
 ## Naming
 
-The naming convention of the files is as follows:
+The naming convention of the dataset files is as follows:
 
 `year-source-originaldataset.csv`
 
-Which is composed of the following parts
+This naming scheme is composed of the following parts:
 
 - `year`: The year on which the data is being reported (or final year, if the dataset includes a range).
 - `source`: A short name for the organization that was the source of the data.
@@ -55,15 +49,90 @@ Which is composed of the following parts
 
 Each of the data files was normalized with some variation of the following processing steps:
 
+- Split out embedded HTML hyperlink URLs into their own columns from the anchor text
+- Split out columns that contained multiple categorical values within a single column into separate unique columns each with a single, one-hot encoded, value
+- Replace empty cells with the placeholder value "N/A"
+- Rename column headers/field names to have a consistent standard (all lowercase, underscores)
+- Replace newline characters within columns with an appropriate separator
+- Clean up incorrectly encoded characters
+- Remove empty rows
+
+The specific normalization that was applied to each file is documented in the three Jupyter notebooks included in `/notebooks`.
+
 ## Data Dictionary
 
+_Note: The data dictionary does not include a **Measurement Unit** column as none of the values represents a measurement taken in a particular unit._
+
+**SLJ Controversial Books Survey on Self-Censorship data**
+
+`2016-slj-controversial_books_survey.csv`:
+
+| **Variable** | **Variable Name** | **Variable Type**  | **Allowed Values** | **Definition** |
+| --- | --- | --- | --- | --- |
+| **survey_name** | Survey Name | String | [Weighing Subject Matter, Comments About Age-Appropriateness, Comments About Book Challenges] | The name of the particular survey question the observation is in response to |
+| **librarian_comments** | Librarian Comments | String | Any | The comment by the librarian responding to the survey question |
+| **region** | Region | String | [Midwest, Mountain, Northeast, Pacific, South Atlantic, South Central] | The general region of the US where the response is from |
+| **locality** | Locality | String | [Rural, Small Town, Suburban, Urban] | The type of community area based on general population level |
+| **elementary_school** | Elementary School Level | Integer | 0 or 1 | Whether this response applies to an Elementary School level (Pre K - 5) |
+| **middle_school** | Middle School Level | Integer | 0 or 1 | Whether this response applies to a Middle School level (6 - 8) |
+| **high_school** | High School Level | Integer | 0 or 1 | Whether this response applies to a High School level (9 - 12) |
+
+**NCAC Youth Censorship Database data**
+
+`2022-ncac-youth_censorship_database.csv`:
+
+| **Variable** | **Variable Name** | **Variable Type** | **Allowed Values** | **Definition** |
+| --- | --- | --- | --- | --- |
+| **summary** | Summary | String | Any | A summary of the nature or target of the censorship incident |
+| **censor_reason** | Censor Reason | String | Any | The reason provided as justification for censorship |
+| **link** | Link | String | Any | A link to additional information or new article about the incident |
+| **type** | Type | String | Any | A categorization of the type of thing the censorship applied to |
+| **year** | Year | Date | YYYY | The year in which the incident occurred |
+| **challenger** | Challenger | String | Any | The nature of the person or entity issuing the censorship challenge |
+| **book_theme** | Book Theme | String | Any | The theme of the book that is subject to the challenge, if relevant, otherwise N/A |
+| **school_district** | School District | String | Any | The name of the school district where the challenge occurred |
+| **notes** | Notes | String | Any | Additional details related to the incident |
+| **state** | State | String | US State names | The name of the US state where the incident occurred |
+| **impacted_high_school** | High School Impacted | Integer | 0 or 1 | Whether the impacted population was a High School |
+| **impacted_public_library** | Public Library Impacted | Integer | 0 or 1 | Whether the impacted population was a Public Library |
+| **impacted_elementary_school** | Elementary School Impacted | Integer | 0 or 1 | Whether the impacted population was an Elementary School |
+| **impacted_middle_school** | Middle School Impacted | Integer | 0 or 1 | Whether the impacted population was a Middle School |
+| **impacted_K-12** | K-12 Impacted | Integer | 0 or 1 | Whether the impacted population was K - 12 students |
+| **impacted_P-8** | P-8 Impacted | Integer | 0 or 1 | Whether the impacted population was Preschool through 8th students |
+
+**PEN America Educational Gag Orders data**
+
+`2022-pen_america-educational_gag_orders.csv`:
+
+| **Variable** | **Variable Name** | **Variable Type** | **Allowed Values** | **Definition** |
+| --- | --- | --- | --- | --- |
+| **state** | State | String | Any | The US state where the gag order occurred |
+| **bill_number** | Bill Number | String | Any | The bill number of the bill introducing the gag order |
+| **date_introduced** | Date Introduced | Date | YYYY-MM-DD | The date when the order was introduced |
+| **status** | Status | String | Any | The present legal status of the order |
+| **primary_sponsor** | Primary Sponsor | String | Any | The primary person or organization sponsoring the bill |
+| **description** | Description | String | Any | A description of what the gag order disallows within the targeted institutions |
+| **enforcement_penalties** | Enforcement/Penalties | String | Any | The legal penalties stipulated for violating the gag order |
+| **bill_hyperlink** | Bill Hyperlink | String | Any | A link to additional documentation about the bill's details |
+| **status_hyperlink** | Status Hyperlink | String | Any | A link to additional documentation about the present status of the bill |
+| **targets_k-12** | Targets K-12 | Integer | 0 or 1 | Whether the order targets K - 12 schools |
+| **targets_colleges** | Targets Colleges | Integer | 0 or 1 | Whether the order targets Colleges |
+| **targets_state_institutions** | Targets State Institutions | Integer | 0 or 1 | Whether the order targets State Institutions |
+| **targets_state_contractors** | Targets State Contractors | Integer | 0 or 1 | Whether the order targets State Contractors |
+| **targets_state_agencies** | Targets State Agencies | Integer | 0 or 1 | Whether the order targets State Agencies |
+| **targets_political_subdivisions** | Targets Political Subdivisions | Integer | 0 or 1 | Whether the order targets Political Subdivisions |
+| **targets_charter_schools** | Targets Charter Schools | Integer | 0 or 1 | Whether the order targets Charter Schools |
+| **targets_employers** | Targets Employers | Integer | 0 or 1 | Whether the order targets Employers |
+| **targets_state_contractor** | Targets State Contractors | Integer | 0 or 1 | Whether the order targets State Contractors |
+| **targets_state_entities** | Targets State Entities | Integer | 0 or 1 | Whether the order targets State Entities |
+| **targets_private_business** | Targets Private Businesses | Integer | 0 or 1 | Whether the order targets Private Businesses |
+| **targets_non-profits** | Targets Non-Profits | Integer | 0 or 1 | Whether the order targets Non-Profits |
+| **targets_tax_exempt_organizations** | Targets Tax Exempt Organizations | Integer | 0 or 1 | Whether the order target Tax Exempt organizations |
+
 ## Metadata
+
+
 
 ## Security
 
 While the original data are publicly available on the websites of their respective sources, they are offered there without any explicit data license agreement. They are collected and offered here with an understanding that any attempt should be made to request permission from the originators before this data is incorporated into any downstream data product.
-
-## Contact
-
-Scott Johnson
-scott.philips.johnson@gmail.com
