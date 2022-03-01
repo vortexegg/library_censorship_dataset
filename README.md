@@ -43,13 +43,13 @@ _Note: The Jupyter notebooks and unprocessed files are included in this reposito
 
 The naming convention of the dataset files is as follows:
 
-`year-source-originaldataset.csv`
+`year-source-original_data_set.csv`
 
 This naming scheme is composed of the following parts:
 
 - `year`: The year on which the data is being reported (or final year, if the dataset includes a range).
 - `source`: A short name for the organization that was the source of the data.
-- `originaldataset`: The name of the original report, index, or database that the curated data was originally drawn from.
+- `original_data_set`: The name of the original report, index, or database that the curated data was originally drawn from.
 
 ## Data Normalization
 
