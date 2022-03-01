@@ -5,11 +5,11 @@ This dataset was created for Data Curation course at the University of Washingto
 The dataset is available as three .csv files collected from the following sources:
 
 1. Source: [School Library Journal's Controversial Books Survey on Self-Censorship](https://www.slj.com/page/features-self-censorship)
-    - File: `2016-slj-controversial_books_survey.csv`
+    - File: [2016-slj-controversial_books_survey.csv](/data/2016-slj-controversial_books_survey.csv)
 2. Source: [National Coalition Against Censorship's Youth Censorship Database](https://ncac.org/youth-censorship-database)
-    - File: `2022-ncac-youth_censorship_database.csv`
+    - File: [2022-ncac-youth_censorship_database.csv](/data/2022-ncac-youth_censorship_database.csv)
 3. Source: [PEN America's Educational Gag Orders Index](https://pen.org/steep-rise-gag-orders-many-sloppily-drafted/)
-    - File: `2022-pen_america-educational_gag_orders.csv`
+    - File: [2022-pen_america-educational_gag_orders.csv](/data/2022-pen_america-educational_gag_orders.csv)
 
 ## Table of Contents
 
@@ -17,7 +17,13 @@ The dataset is available as three .csv files collected from the following source
 - [Naming](#naming)
 - [Data Normalization](#data-normalization)
 - [Data Dictionary](#data-dictionary)
+    - [1. Documentation for SLJ Controversial Books Survey dataset](#1-documentation-for-slj-controversial-books-survey-dataset)
+    - [2. Documentation for NCAC Youth Censorship Database dataset](#2-documentation-for-ncac-youth-censorship-database-dataset)
+    - [3. Documentation for PEN America Educational Gag Orders dataset](#3-documentation-for-pen-america-educational-gag-orders-dataset)
 - [Metadata](#metadata)
+    - [ A. Metadata for SLJ Controversial Books Survey dataset](#a-metadata-for-slj-controversial-books-survey-dataset)
+    - [B. Metadata for NCAC Youth Censorship Database dataset](#b-metadata-for-ncac-youth-censorship-database-dataset)
+    - [C. Metadata for PEN America Educational Gag Orders dataset](#c-metadata-for-pen-america-educational-gag-orders-dataset)
 - [Security](#security)
 
 ## Directory Structure
@@ -57,7 +63,7 @@ Each of the data files was normalized with some variation of the following proce
 - Clean up incorrectly encoded characters
 - Remove empty rows
 
-The specific normalization that was applied to each file is documented in the three Jupyter notebooks included in `/notebooks`.
+The specific normalization that was applied to each file is documented in the three Jupyter notebooks included in [/notebooks](/notebooks/).
 
 ## Data Dictionary
 
@@ -65,7 +71,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 
 ### 1. Documentation for SLJ Controversial Books Survey dataset
 
-`2016-slj-controversial_books_survey.csv`:
+[2016-slj-controversial_books_survey.csv](/data/2016-slj-controversial_books_survey.csv):
 
 | **Variable** | **Variable Name** | **Variable Type**  | **Allowed Values** | **Definition** |
 | --- | --- | --- | --- | --- |
@@ -79,7 +85,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 
 ### 2. Documentation for NCAC Youth Censorship Database dataset
 
-`2022-ncac-youth_censorship_database.csv`:
+[2022-ncac-youth_censorship_database.csv](/data/2022-ncac-youth_censorship_database.csv):
 
 | **Variable** | **Variable Name** | **Variable Type** | **Allowed Values** | **Definition** |
 | --- | --- | --- | --- | --- |
@@ -102,7 +108,7 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 
 ### 3. Documentation for PEN America Educational Gag Orders dataset
 
-`2022-pen_america-educational_gag_orders.csv`:
+[2022-pen_america-educational_gag_orders.csv](/data/2022-pen_america-educational_gag_orders.csv):
 
 | **Variable** | **Variable Name** | **Variable Type** | **Allowed Values** | **Definition** |
 | --- | --- | --- | --- | --- |
