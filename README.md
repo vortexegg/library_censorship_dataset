@@ -137,13 +137,6 @@ _Note: The data dictionary does not include a **Measurement Unit** column as non
 
 ## Metadata
 
-removed publisher
-removed relation
-removed rights
-added audience
-put my name as contributor, since the original source is the creator of the content
-used spatial and temporal coverage fields
-
 Schema: [Dublin Core](https://www.dublincore.org)
 
 ### A. Metadata for SLJ Controversial Books Survey dataset
